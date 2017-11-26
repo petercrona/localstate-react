@@ -1,23 +1,30 @@
 {
-  "name": "mvsplit-react",
-  "version": "0.1.0",
-  "description": "React HOC for mvsplit",
-  "main": "index.js",
-  "peerDependencies": {
-    "react": "16.x",
-    "mvsplit": "0.x"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/petercrona/mvsplit-react.git"
-  },
-  "author": "Peter Crona",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/petercrona/mvsplit-react/issues"
-  },
-  "homepage": "https://github.com/petercrona/mvsplit-react#readme"
+    "name": "mvsplit-react",
+    "version": "0.2.0",
+    "description": "React HOC for mvsplit",
+    "main": "dist/index.js",
+    "peerDependencies": {
+        "react": "16.x",
+        "mvsplit": "0.x"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.0.0-beta.32",
+        "@babel/core": "^7.0.0-beta.32",
+        "@babel/preset-env": "^7.0.0-beta.32",
+        "babel-minify": "^0.2.0",
+        "babel-plugin-transform-object-rest-spread": "^6.26.0"
+    },
+    "scripts": {
+        "build": "./node_modules/.bin/babel src/index.js | ./node_modules/.bin/minify > dist/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/petercrona/mvsplit-react.git"
+    },
+    "author": "Peter Crona",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/petercrona/mvsplit-react/issues"
+    },
+    "homepage": "https://github.com/petercrona/mvsplit-react#readme"
 }
