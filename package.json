@@ -1,6 +1,6 @@
 {
     "name": "mvsplit-react",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "React HOC for mvsplit",
     "main": "dist/index.js",
     "peerDependencies": {
