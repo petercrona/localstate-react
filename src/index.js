@@ -15,7 +15,7 @@ const compose = (...fns) => (...args) =>
     reduce((m, f) => f(m), last(fns)(...args), tail(reverse(fns)));
 
 module.exports = curry((model, ComponentToWrap) => {
-    return class WithObserver extends Component {
+    return class WithObserver extends React.Component {
         constructor(props) {
             super(props);
 
