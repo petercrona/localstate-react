@@ -1,0 +1,27 @@
+{
+  "name": "mvsplit-react",
+  "version": "0.1.0",
+  "description": "React HOC for mvsplit",
+  "main": "index.js",
+  "peerDependencies": {
+    "react": "16.x",
+    "mvsplit": "0.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petercrona/mvsplit-react.git"
+  },
+  "author": "Peter Crona",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petercrona/mvsplit-react/issues"
+  },
+  "homepage": "https://github.com/petercrona/mvsplit-react#readme",
+  "dependencies": {
+    "mvsplit": "^0.1.0",
+    "react": "^16.1.1"
+  }
+}
