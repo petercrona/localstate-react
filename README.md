@@ -1,8 +1,8 @@
-# mvsplit-react
-A React HOC that make Mvsplit and React a pleasure to use together
+# mvstate-react
+A React HOC that make Mvstate and React a pleasure to use together
 
-Mvsplit can be a bit scary, at least if you are not familiar with functors.
-Mvsplit-React provides you with a nice little HOC that allows you to express your
+Mvstate can be a bit scary, at least if you are not familiar with functors.
+Mvstate-React provides you with a nice little HOC that allows you to express your
 React code more clearly. Let's look at an example:
 
 ``` JavaScript

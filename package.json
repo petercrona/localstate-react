@@ -1,11 +1,11 @@
 {
-    "name": "mvsplit-react",
+    "name": "mvstate-react",
     "version": "0.2.3",
-    "description": "React HOC for mvsplit",
+    "description": "React HOC for Mvstate",
     "main": "dist/index.js",
     "peerDependencies": {
         "react": "16.x",
-        "mvsplit": "0.x"
+        "mvstate": "0.x"
     },
     "devDependencies": {
         "@babel/cli": "^7.0.0-beta.32",
@@ -19,12 +19,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/petercrona/mvsplit-react.git"
+        "url": "git+https://github.com/petercrona/mvstate-react.git"
     },
     "author": "Peter Crona",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/petercrona/mvsplit-react/issues"
+        "url": "https://github.com/petercrona/mvstate-react/issues"
     },
-    "homepage": "https://github.com/petercrona/mvsplit-react#readme"
+    "homepage": "https://github.com/petercrona/mvstate-react#readme"
 }

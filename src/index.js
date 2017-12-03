@@ -1,5 +1,5 @@
 const React = require('react');
-const Observable = require('mvsplit');
+const Observable = require('mvstate');
 
 const curry = (f) => (...args) => {
     const nrArgsRequired = f.length;
@@ -43,14 +43,14 @@ module.exports = curry((model, ComponentToWrap) => {
                 compose(head(fns), ...map(Observable.fmap, tail(fns)))(this.state.observable);
             const notify = (...fns) => () =>
                 compose(Observable.notify, ...map(Observable.fmap, fns))(this.state.observable);
-            const mvsplitProps = {
+            const mvstateProps = {
                 handle,
                 notify,
                 model: Observable.getModel(this.state.observable),
                 observable: this.state.observable
             };
 
-            return React.createElement(ComponentToWrap, {...this.props, mvsplit: mvsplitProps});
+            return React.createElement(ComponentToWrap, {...this.props, mvstate: mvstateProps});
         }
     };
 });
