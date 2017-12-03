@@ -8,9 +8,18 @@ const curry = (f) => (...args) => {
     }
     return f(...args);
 };
-const map = curry((fn, xs) => xs.map(fn));
+const reverse = xs => xs.slice().reverse();
+const map = curry((fn, xs) => xs.map(x => fn(x)));
+const map_ = curry((fn, xs) => { map(fn, xs); });
 const tail = xs => xs.slice(1, xs.length);
+const last = xs => xs[xs.length - 1];
 const head = xs => xs[0];
+const reduce = curry((f, currResult, xs) => {
+    map_((x) => {
+        currResult = f(currResult, x);
+    }, xs);
+    return currResult;
+});
 const compose = (...fns) => (...args) =>
     reduce((m, f) => f(m), last(fns)(...args), tail(reverse(fns)));
 
