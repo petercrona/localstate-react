@@ -53,7 +53,7 @@ module.exports = curry((model, ComponentToWrap) => {
                 return compose(notifyComposition, lastFn);
             };
 
-            const mvstateProps = {
+            const localstateProps = {
                 handle,
                 notify,
                 notify2,
@@ -61,7 +61,7 @@ module.exports = curry((model, ComponentToWrap) => {
                 observable: this.state.observable
             };
 
-            return React.createElement(ComponentToWrap, {...this.props, mvstate: mvstateProps});
+            return React.createElement(ComponentToWrap, {...this.props, _localstate: localstateProps});
         }
     };
 });
