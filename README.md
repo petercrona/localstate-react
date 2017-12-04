@@ -1,8 +1,8 @@
-# mvstate-react
-A React HOC that make Mvstate and React a pleasure to use together
+# Localstate-React
+A React HOC that make Localstate and React a pleasure to use together
 
-Mvstate can be a bit scary, at least if you are not familiar with functors.
-Mvstate-React provides you with a nice little HOC that allows you to express your
+Localstate can be a bit scary, at least if you are not familiar with functors.
+Localstate-React provides you with a nice little HOC that allows you to express your
 React code more clearly. Let's look at an example:
 
 ``` JavaScript
@@ -14,7 +14,7 @@ export const dec = ({counter}) => ({counter: counter - 1});
 // Component
 import {create, dec, inc} from './Model';
 
-function Counter({refunc: {model, notify}}) {
+function Counter({_localstate: {model, notify}}) {
     return (
         <div>
             <p>
