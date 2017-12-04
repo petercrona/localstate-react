@@ -14,6 +14,7 @@ const map_ = curry((fn, xs) => { map(fn, xs); });
 const tail = xs => xs.slice(1, xs.length);
 const last = xs => xs[xs.length - 1];
 const head = xs => xs[0];
+const init = xs => xs.slice(0, xs.length - 1);
 const reduce = curry((f, currResult, xs) => {
     map_((x) => {
         currResult = f(currResult, x);
@@ -41,11 +42,21 @@ module.exports = curry((model, ComponentToWrap) => {
         render() {
             const handle = (...fns) => () =>
                 compose(head(fns), ...map(Observable.fmap, tail(fns)))(this.state.observable);
+
             const notify = (...fns) => () =>
                 compose(Observable.notify, ...map(Observable.fmap, fns))(this.state.observable);
+
+            const notify2 = (...fns) => {
+                const notifyComposition =
+                    compose(Observable.notify, ...map(Observable.fmap, init(fns)));
+                const lastFn = Observable.fmap2(last(fns), this.state.observable);
+                return compose(notifyComposition, lastFn);
+            };
+
             const mvstateProps = {
                 handle,
                 notify,
+                notify2,
                 model: Observable.getModel(this.state.observable),
                 observable: this.state.observable
             };
