@@ -1,11 +1,11 @@
 {
     "name": "localstate-react",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "React HOC for Localstate",
     "main": "dist/index.js",
     "peerDependencies": {
         "react": "16.x",
-        "mvstate": "^0.1.1"
+        "localstate": "^0.1.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.0.0-beta.32",

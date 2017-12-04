@@ -1,5 +1,5 @@
 const React = require('react');
-const Observable = require('mvstate');
+const Observable = require('localstate');
 
 const curry = (f) => (...args) => {
     const nrArgsRequired = f.length;
